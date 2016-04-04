@@ -1,6 +1,4 @@
-
 class Character:
-
     def __init__(self, name, attributes):
         self.name = name
         self.attributes = attributes
@@ -14,15 +12,11 @@ class Character:
         self.__validateattributes(attributes)
         self.__attributes = attributes
 
-
     def __validateattributes(self, attributes):
         if not isinstance(attributes, Attributes):
             raise TypeError('Attributes Property Not Correct Type')
 
-
-
 class Attributes:
-
     def __init__(self, body, agility, reaction, strength, willpower, logic, intuition, charisma, edge, essence):
         self.body = body
         self.agility = agility
@@ -139,21 +133,3 @@ class Attributes:
                 raise AttributeError('Attribute Values Must be Between 1 and 50')
         else:
             raise TypeError('Attribute Values Should be Integers')
-
-
-class Encounter:
-
-    def __init__(self, characters):
-        this.characters = characters
-
-
-
-
-
-
-if __name__ == '__main__':
-    x = Attributes(body=2, agility=7, reaction=5, strength=5, willpower=7, logic=6, intuition=1, charisma=8, edge=9, essence=7)
-    print(x.initiative)
-
-    c = Character('Luke', x)
-    print(c.attributes.strength)
